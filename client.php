@@ -6,7 +6,7 @@ class classClient
 	{
 		$params = [
 			"location" => "http://localhost/soap-api/server.php",
-			"uri"      => "http://localhost/soap-api/server.php",
+			"uri"      => "http://localhost/soap-api/",
 			"trace"    => 1,
 		];
 		
@@ -16,7 +16,7 @@ class classClient
 	
 	public function getNameAsServerSoap()
 	{
-		$name   = $this->instance->__soapCall('getName', []);
+		$name   = $this->instance->__soapCall('getName', ['h','i']);
 		$family = $this->instance->__soapCall('getFamily', []);
 		
 		return $name . "-" . $family;

@@ -7,9 +7,9 @@ class serverApi
 		
 	}
 	
-	public function getName()
+	public function getName($str1, $str2)
 	{
-		return "hello ";
+		return $str1.$str2. " hello ";
 	}
 	
 	public function getFamily()
@@ -21,7 +21,7 @@ class serverApi
 
 
 $params = [
-	"uri" => "http://localhost/soap-api/server.php",
+	"uri" => "http://localhost/soap-api/",
 ];
 $server = new SoapServer(NULL, $params);
 $server->setClass('serverApi');
